@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spaceo.navigationgraph.HomeActivity">
+
+    <TextView
+        android:id="@+id/txtIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We Will Use Navigation Graph To Switch Between These Fragments"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tvShowCars"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txtIntro"
+        android:layout_height="wrap_content"
+        android:text="Fisrt Fragment"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:textColor="@color/Black"/>
+
+    <TextView
+        android:id="@+id/tvShowBikes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Second Fragment"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/tvShowCars"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:textColor="@color/Black"/>
+
+    <TextView
+        android:id="@+id/tvShowTrucks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Third Fragment"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="4dp"
+        android:layout_below="@id/tvShowBikes"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:textColor="@color/Black"/>
+
+    <TextView
+        android:id="@+id/tvShowAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fourth Fragment"
+        android:gravity="center"
+        android:layout_below="@id/tvShowTrucks"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="18sp"
+        android:textColor="@color/Black"/>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.spaceo.navigationgraph.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/activity_home">
+        <action
+            android:id="@+id/action_homeActivity_to_carsFragment"
+            app:destination="@id/carsFragment"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/carsFragment" />
+        <action
+            android:id="@+id/action_homeActivity_to_allFragment"
+            app:destination="@id/allFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/allFragment" >
+            <argument
+                android:name="userText"
+                app:argType="string"
+                android:defaultValue="Hello World 2" />
+        </action>
+        <action
+            android:id="@+id/action_homeActivity_to_bikesFragment"
+            app:destination="@id/bikesFragment"
+            app:popUpTo="@id/bikesFragment" />
+        <action
+            android:id="@+id/action_homeActivity_to_trucksFragment"
+            app:destination="@id/trucksFragment"
+            app:popUpTo="@id/trucksFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/bikesFragment"
+        android:name="com.spaceo.navigationgraph.fragment.BikesFragment"
+        android:label="fragment_bikes"
+        tools:layout="@layout/fragment_bikes" >
+        <argument
+            android:name="userText"
+            app:argType="string"
+            android:defaultValue="Hello World3" />
+    </fragment>
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.spaceo.navigationgraph.fragment.CarsFragment"
+        android:label="fragment_cars"
+        tools:layout="@layout/fragment_cars" >
+        <argument
+            android:name="userText"
+            app:argType="string"
+            android:defaultValue="Hello World1" />
+    </fragment>
+    <fragment
+        android:id="@+id/trucksFragment"
+        android:name="com.spaceo.navigationgraph.fragment.TrucksFragment"
+        android:label="fragment_trucks"
+        tools:layout="@layout/fragment_trucks" />
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.spaceo.navigationgraph.fragment.AllFragment"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all">
+    </fragment>
+</navigation>
